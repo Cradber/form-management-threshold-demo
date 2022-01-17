@@ -1,3 +1,4 @@
+import {Box, Typography} from "@mui/material";
 
 const Style = {
     display: 'flex',
@@ -16,7 +17,13 @@ const BoxStyle = {
 }
 
 const ManagementThresholdApp = () => (
-    <h1>Management threshold form</h1>
+    <div style={Style}>
+        <Box style={BoxStyle}>
+            <Typography variant={'h6'} color={'secondary'}>
+                Management Threshold
+            </Typography>
+        </Box>
+    </div>
 )
 
 export default ManagementThresholdApp
