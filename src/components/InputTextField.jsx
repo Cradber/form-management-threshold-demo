@@ -1,6 +1,7 @@
 import {Field} from "react-final-form";
 import {TextField} from "@mui/material";
 import {required} from "./helpers";
+import PropTypes from 'prop-types';
 
 export const InputTextField = ({name, placeholder}) => {
     return (
@@ -32,4 +33,9 @@ export const InputTextField = ({name, placeholder}) => {
             }
         </Field>
     )
+}
+
+InputTextField.propTypes = {
+    name: PropTypes.string.isRequired,
+    placeholder: PropTypes.string.isRequired
 }
