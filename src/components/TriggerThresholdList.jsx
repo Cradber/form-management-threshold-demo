@@ -1,8 +1,8 @@
 import {Button, List, ListItem, Typography} from "@mui/material";
-import {FieldArray} from "react-final-form-arrays";
-import {TriggerThresholdItem} from "./TriggerThresholdItem";
 import {Add} from "@mui/icons-material";
+import {FieldArray} from "react-final-form-arrays";
 import PropTypes from "prop-types";
+import {TriggerThresholdItem} from "./TriggerThresholdItem";
 
 
 export const TriggerThresholdList = ({name, add}) => {
