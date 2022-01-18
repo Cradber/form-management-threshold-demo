@@ -3,6 +3,7 @@ import arrayMutators from 'final-form-arrays'
 import {onSubmit} from "./helpers";
 import {Button, Stack} from "@mui/material";
 import {InputTextField} from "./InputTextField";
+import {OptionSelector, SelectorField} from "./SelectorField";
 
 export const ManagementForm = () => (
     <Form onSubmit={onSubmit}
@@ -20,6 +21,14 @@ export const ManagementForm = () => (
                 <form onSubmit={handleSubmit}>
 
                     <InputTextField name={'objectTrack'} placeholder={'Object Type'} />
+
+                    <SelectorField name={'operationType'} placeholder={'Operation Type'} >
+                        <OptionSelector value={'option1'}>Option 1</OptionSelector>
+                        <OptionSelector value={'option2'}>Option 2</OptionSelector>
+                        <OptionSelector value={'option3'}>Option 3</OptionSelector>
+                        <OptionSelector value={'option4'}>Option 4</OptionSelector>
+                        <OptionSelector value={'option5'}>Option 5</OptionSelector>
+                    </SelectorField>
 
                     <Stack direction={'row'}
                            spacing={2}
