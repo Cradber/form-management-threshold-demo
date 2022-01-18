@@ -2,6 +2,7 @@ import {Form} from "react-final-form";
 import arrayMutators from 'final-form-arrays'
 import {onSubmit} from "./helpers";
 import {Button, Stack} from "@mui/material";
+import {InputTextField} from "./InputTextField";
 
 export const ManagementForm = () => (
     <Form onSubmit={onSubmit}
@@ -18,6 +19,7 @@ export const ManagementForm = () => (
              }) => (
                 <form onSubmit={handleSubmit}>
 
+                    <InputTextField name={'objectTrack'} placeholder={'Object Type'} />
 
                     <Stack direction={'row'}
                            spacing={2}
