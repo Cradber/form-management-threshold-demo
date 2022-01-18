@@ -1,4 +1,49 @@
+import {Form} from "react-final-form";
+import arrayMutators from 'final-form-arrays'
+import {onSubmit} from "./helpers";
+import {Button, Stack} from "@mui/material";
 
 export const ManagementForm = () => (
-    <h1>Form</h1>
+    <Form onSubmit={onSubmit}
+          mutators={{...arrayMutators}}
+          subscription={{submitted: true}}
+    >
+        {
+            ({
+                handleSubmit,
+                form,
+                form: {mutators: {push}},
+                submitting,
+                pristine
+             }) => (
+                <form onSubmit={handleSubmit}>
+
+
+                    <Stack direction={'row'}
+                           spacing={2}
+                           justifyContent={'flex-end'}
+                    >
+                        <Button color={'secondary'}
+                                size={'large'}
+                                type={'reset'}
+                                onClick={form.reset}
+                                disabled={submitting || pristine}
+                        >
+                            Cancel
+                        </Button>
+                        <Button variant={'contained'}
+                                color={'secondary'}
+                                size={'large'}
+                                type={'submit'}
+                                disabled={submitting || pristine}
+                                disableElevation
+                        >
+                            Confirm
+                        </Button>
+                    </Stack>
+
+                </form>
+            )
+        }
+    </Form>
 )
