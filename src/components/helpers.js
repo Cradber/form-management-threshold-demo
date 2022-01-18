@@ -2,7 +2,7 @@
 // const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 export const handleValidation = (values) => {
-    if (values['triggerThreshold'] === undefined)
+    if (!values['triggerThreshold'] || values['triggerThreshold'].length === 0)
         window.alert('You must specify any trigger threshold')
     else {
         let maxPrev = 0
@@ -18,6 +18,8 @@ export const handleValidation = (values) => {
                 maxPrev = parseInt(max)
             }
         })
+
+        window.alert(JSON.stringify(values, 0, 2));
     }
 }
 
@@ -26,7 +28,7 @@ export const onSubmit = (values) => {
     handleValidation(values)
 
     // await sleep(300);
-    window.alert(JSON.stringify(values, 0, 2));
+    // window.alert(JSON.stringify(values, 0, 2));
 };
 
 export const required = value => (value ? undefined : 'Required')
