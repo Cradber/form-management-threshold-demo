@@ -1,7 +1,7 @@
 import {Field} from "react-final-form";
 import {TextField} from "@mui/material";
-import {required} from "./helpers";
 import PropTypes from 'prop-types';
+import {required} from "./helpers";
 
 export const InputTextField = ({name, placeholder}) => {
     return (
