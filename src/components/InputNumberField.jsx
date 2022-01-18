@@ -1,6 +1,7 @@
 import {Field} from "react-final-form";
 import {TextField} from "@mui/material";
 import {useState} from "react";
+import PropTypes from 'prop-types';
 
 export const InputNumberField = ({name, placeholder}) => {
     const [validityField, setValidityField] = useState(false)
@@ -29,4 +30,9 @@ export const InputNumberField = ({name, placeholder}) => {
             }
         </Field>
     )
+}
+
+InputNumberField.propTypes = {
+    name: PropTypes.string.isRequired,
+    placeholder: PropTypes.string.isRequired
 }
