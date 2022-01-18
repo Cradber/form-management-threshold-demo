@@ -14,7 +14,7 @@ export const TriggerThresholdItem = ({name, index, handleDelete}) => (
         <InputTextField name={`${name}.name`}
                         placeholder={'Threshold Name'}
         />
-        <SelectorColor name={`${name}.color`} />
+        <SelectorColor name={`${name}.color`} color={'#000000'} />
         <InputNumberField name={`${name}.min`}
                           placeholder={'Min Trigger Value'}
         />
