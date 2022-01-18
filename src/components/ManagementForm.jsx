@@ -4,6 +4,7 @@ import {onSubmit} from "./helpers";
 import {Button, Stack} from "@mui/material";
 import {InputTextField} from "./InputTextField";
 import {OptionSelector, SelectorField} from "./SelectorField";
+import {TriggerThresholdList} from "./TriggerThresholdList";
 
 export const ManagementForm = () => (
     <Form onSubmit={onSubmit}
@@ -29,6 +30,11 @@ export const ManagementForm = () => (
                         <OptionSelector value={'option4'}>Option 4</OptionSelector>
                         <OptionSelector value={'option5'}>Option 5</OptionSelector>
                     </SelectorField>
+
+                    <TriggerThresholdList name={'triggerThreshold'}
+                                          add={() => push('triggerThreshold')}
+                    />
+
 
                     <Stack direction={'row'}
                            spacing={2}
