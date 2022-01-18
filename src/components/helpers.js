@@ -21,8 +21,11 @@ export const handleValidation = (values) => {
     }
 }
 
-export const onSubmit = async (values) => {
-    await sleep(300);
+export const onSubmit = (values) => {
+    // ev.preventDefault()
+    handleValidation(values)
+
+    // await sleep(300);
     window.alert(JSON.stringify(values, 0, 2));
 };
 
