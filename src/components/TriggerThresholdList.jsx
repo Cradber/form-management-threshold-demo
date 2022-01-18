@@ -2,6 +2,7 @@ import {Button, List, ListItem, Typography} from "@mui/material";
 import {FieldArray} from "react-final-form-arrays";
 import {TriggerThresholdItem} from "./TriggerThresholdItem";
 import {Add} from "@mui/icons-material";
+import PropTypes from "prop-types";
 
 
 export const TriggerThresholdList = ({name, add}) => {
@@ -43,4 +44,9 @@ export const TriggerThresholdList = ({name, add}) => {
             </Button>
         </>
     )
+}
+
+TriggerThresholdList.propTypes = {
+    name: PropTypes.string.isRequired,
+    add: PropTypes.func.isRequired
 }
