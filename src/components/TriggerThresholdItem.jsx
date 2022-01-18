@@ -1,10 +1,10 @@
-import {InputTextField} from "./InputTextField";
 import {IconButton, Stack} from "@mui/material";
+import {Delete} from "@mui/icons-material";
+import PropTypes from "prop-types";
+import {InputTextField} from "./InputTextField";
 import {SelectorColor} from "./SelectorColor";
 import {InputNumberField} from "./InputNumberField";
-import {Delete} from "@mui/icons-material";
 import {OptionSelector, SelectorField} from "./SelectorField";
-import PropTypes from "prop-types";
 
 export const TriggerThresholdItem = ({name, index, handleDelete}) => (
     <Stack direction={'row'}
