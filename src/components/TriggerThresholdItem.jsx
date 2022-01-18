@@ -4,6 +4,7 @@ import {SelectorColor} from "./SelectorColor";
 import {InputNumberField} from "./InputNumberField";
 import {Delete} from "@mui/icons-material";
 import {OptionSelector, SelectorField} from "./SelectorField";
+import PropTypes from "prop-types";
 
 export const TriggerThresholdItem = ({name, index, handleDelete}) => (
     <Stack direction={'row'}
@@ -37,3 +38,9 @@ export const TriggerThresholdItem = ({name, index, handleDelete}) => (
         </IconButton>
     </Stack>
 )
+
+TriggerThresholdItem.propTypes = {
+    name: PropTypes.string.isRequired,
+    index: PropTypes.number.isRequired,
+    handleDelete: PropTypes.func.isRequired
+}
