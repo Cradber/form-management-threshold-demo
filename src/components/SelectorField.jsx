@@ -49,3 +49,9 @@ export const SelectorField = ({name, placeholder, children}) => {
         </Field>
     )
 }
+
+SelectorField.propTypes = {
+    name: PropTypes.string.isRequired,
+    placeholder: PropTypes.string,
+    children: PropTypes.any.isRequired
+}
