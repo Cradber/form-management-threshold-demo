@@ -1,7 +1,7 @@
 import {Form} from "react-final-form";
 import arrayMutators from 'final-form-arrays'
-import {onSubmit} from "./helpers";
 import {Button, Stack} from "@mui/material";
+import {onSubmit} from "./helpers";
 import {InputTextField} from "./InputTextField";
 import {OptionSelector, SelectorField} from "./SelectorField";
 import {TriggerThresholdList} from "./TriggerThresholdList";
